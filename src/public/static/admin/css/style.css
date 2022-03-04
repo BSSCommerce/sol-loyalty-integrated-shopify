@@ -1,0 +1,645 @@
+.bss-b2b-container {
+
+}
+
+.bss-b2b-container .bss-b2b-datasheet {
+    margin-top: 10px;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+.bss-b2b-container .Polaris-Banner__ContentWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.bss-b2b-container .Polaris-Banner__ContentWrapper > .Polaris-Banner__Heading {
+    order: 2;
+    margin: 0 0 0 10px;
+}
+
+.Polaris-Modal-Dialog__Modal {
+    border-radius: unset !important;
+}
+
+.Polaris-Modal-Dialog__Modal .Polaris-ResourceItem__Container {
+    display: flex;
+    align-items: center;
+}
+
+.data-grid-container .data-grid.b2b-datasheet-grid {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.data-grid-container .data-grid.b2b-datasheet-grid tbody tr td.read-only {
+    background: white;
+}
+
+.data-grid-container .data-grid.b2b-datasheet-grid tbody tr td.cell {
+    padding: 5px 0 5px;
+    position: relative;
+}
+
+.data-grid-container .data-grid.b2b-datasheet-grid tbody tr td.cell .value-viewer {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    width: 100%;
+    left: 50%;
+}
+
+.data-grid-container .data-grid.b2b-datasheet-grid tbody tr td.cell .Polaris-Thumbnail {
+    margin: auto;
+}
+
+.data-grid-container .data-grid.b2b-datasheet-grid thead {
+    background: linear-gradient(135deg, #1400c8 0, #b900b4 100%);
+    color: white;
+}
+
+.data-grid-container .data-grid.b2b-datasheet-grid th.cell {
+    text-align: center;
+    padding: 6px 0;
+}
+
+.data-grid-container .data-grid.b2b-datasheet-grid .cell .data-editor {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.bss-b2b-selected-products,
+.bss-b2b-selected-customers,
+.bss-b2b-selected-tags,
+.bss-b2b-customer-tags,
+.bss-b2b-selected-collections {
+    margin-top: 10px;
+}
+
+.bss-b2b-selected-products .Polaris-Banner__Ribbon,
+.bss-b2b-selected-customers .Polaris-Banner__Ribbon,
+.bss-b2b-selected-collections .Polaris-Banner__Ribbon {
+    display: none;
+}
+
+.bss-b2b-selected-products .Polaris-Banner__Heading .Polaris-Heading,
+.bss-b2b-selected-collections .Polaris-Banner__Heading .Polaris-Heading {
+    font-weight: normal;
+}
+
+/*Index Header*/
+
+.bss-b2b-cp-index-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0 20px;
+    justify-content: space-between;
+}
+
+.bss-b2b-cp-index-header .bss-b2b-cp-index-header-title {
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.bss-b2b-cp-index-header .bss-b2b-cp-index-header-button {
+
+}
+
+button.Polaris-Button.Polaris-Button--primary {
+    border: 0;
+    border-radius: 5px;
+    background: orange;
+    box-shadow: none;
+}
+
+button.Polaris-Button.Polaris-Button--primary:hover {
+    background: linear-gradient(135deg, #1400c8 0, #b900b4 100%);
+    box-shadow: 2px 5px whitesmoke;
+}
+
+.Polaris-Modal-Header__Title {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.Polaris-Modal-Header__Title .Polaris-DisplayText--sizeSmall {
+    font-weight: 500;
+}
+
+.Polaris-TopBar {
+    background: linear-gradient(135deg, #1400c8 0, #b900b4 100%);
+}
+
+
+.Polaris-DataTable thead tr {
+    background: linear-gradient(135deg, #1400c8 0, #b900b4 100%);
+}
+
+.Polaris-DataTable thead tr th {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.Polaris-DataTable thead tr th:not(:last-child) {
+    border-right: 1px whitesmoke solid;
+}
+
+.Polaris-DataTable tbody tr td,
+.Polaris-DataTable tbody tr th {
+    text-align: center;
+    padding: 15px 0 15px;
+}
+
+.Polaris-DataTable thead tr th:first-child,
+.Polaris-DataTable tbody tr th:first-child {
+    width: 50%;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.bss-wholesaler-table-container .Polaris-DataTable thead tr th:first-child,
+.bss-wholesaler-table-container .Polaris-DataTable tbody tr th:first-child {
+    width: 55px !important;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.bss-wholesaler-table-container .Polaris-DataTable thead tr td:nth-child(4),
+.bss-wholesaler-table-container .Polaris-DataTable tbody tr td:nth-child(4) {
+    width: 100px !important;
+    padding-left: 3px;
+    padding-right: 3px;
+    white-space: initial;
+}
+
+.Polaris-DataTable tbody tr th,
+.Polaris-DataTable tbody tr td:not(:last-child) {
+    border-right: 1px whitesmoke solid;
+}
+
+.Polaris-DataTable tbody tr td .Polaris-ButtonGroup {
+    justify-content: center;
+}
+
+.Polaris-DataTable tbody tr td .Polaris-ButtonGroup__Item {
+    margin-top: 0;
+}
+
+.bss-qb-delete-btn {
+    margin: auto;
+    margin-top: 1rem;
+    margin-left: auto;
+}
+
+.margin-left-ft-0:first-child {
+    margin-left: 0px;
+}
+
+.margin-left-0 {
+    margin-left: 0px;
+}
+
+.bss-question-mark-icon .Polaris-Icon {
+    margin: 0px;
+    margin-right: 5px;
+}
+
+/*Style for sticky sidebar*/
+@media screen and (min-width: 1367px) {
+    .bss-b2b-sticky-sidebar {
+        position: sticky;
+        top: 10px;
+        width: auto;
+        max-width: 30%;
+    }
+}
+
+/*For variant selector*/
+.bss-sub-product, .bss-sub-one-variant {
+    padding: 5px 0;
+    border-bottom: 1px solid whitesmoke;
+    border-top: 1px solid whitesmoke;
+}
+
+.bss-sub-variant {
+    padding: 5px 0 5px 45px;
+    border-bottom: 1px solid whitesmoke;
+    box-sizing: border-box;
+}
+.bss-sub-product .Polaris-Choice {
+    align-items: center;
+}
+.bss-sub-product .bss-sub-product-thumbnail {
+    display: flex;
+    align-items: center;
+}
+
+.bss-amo-apply-to .Polaris-ChoiceList {
+    margin-bottom: 20px;
+}
+
+.bss-amo-apply-to ul {
+    display: inline;
+
+}
+
+.bss-amo-apply-to li {
+    display: inline;
+    float: left;
+    margin-left: 10%;
+}
+
+.bss-amo-design .Polaris-Connected {
+    width: 50%;
+}
+
+.bss-b2b-registration .Polaris-Page {
+    max-width: 135.8rem !important;
+}
+
+@media screen and (max-width: 600px) {
+    .bss-b2b-translation-form .Polaris-FormLayout__Items {
+        display: inherit;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .bss-b2b-registration .Polaris-Labelled--hidden .Polaris-Connected, .bss-css-color-text .Polaris-Connected {
+        width: 50%;
+    }
+
+    .bss-b2b-registration .Polaris-Labelled--hidden .Polaris-Connected .Polaris-Connected__Item {
+        margin: 20px;
+    }
+
+    .bss-b2b-registration .Polaris-DataTable {
+        margin-left: 20px;
+        margin-right: 20px;
+        border: 1px whitesmoke solid;
+    }
+
+    .bss-css-color-text {
+        margin-bottom: 25px;
+    }
+}
+
+.bss-b2b-enable-end-date {
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+span.bss-text-or {
+    margin: 0 12px;
+}
+
+div.rdt_TableCol {
+    min-width: 150px;
+}
+
+.bss-b2b-table-import-cp-wrapper {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.bss-b2b-table-import-cp-wrapper .Polaris-DataTable__Navigation {
+    display: none;
+}
+
+.bss-b2b-table-import-cp-wrapper .Polaris-DataTable thead tr th,
+.bss-b2b-table-import-cp-wrapper .Polaris-DataTable tbody tr th {
+    width: 100px;
+    min-width: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.bss-b2b-table-import-cp-wrapper .Polaris-DataTable tbody tr td:nth-child(5),
+.bss-b2b-table-import-cp-wrapper .Polaris-DataTable tbody tr td:nth-child(8),
+.bss-b2b-table-import-cp-wrapper .Polaris-DataTable tbody tr td:nth-child(11) {
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: list-item;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.bss-cart-note .Polaris-FormLayout__Items {
+    display: inherit !important;
+}
+
+.bss-b2b-cart-note-page button {
+    background: linear-gradient(
+            135deg, #1400c8 0, #b900b4 100%);
+    color: white;
+    margin-bottom: 15px;
+    margin-right: 25px;
+}
+
+.bss-b2b-cart-note-page button:hover {
+    background: linear-gradient(
+            135deg, #1400c8 0, #b900b4 100%);
+}
+
+.bss-b2b-cart-note-page .input-cart-note {
+    width: 100%;
+    height: 400px;
+}
+
+.Polaris-TextStyle--variationCode {
+    padding: 10px 25px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.alert.alert-warning {
+    margin: 1rem 0;
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+.bss-b2b-config-sender-email {
+    text-align: center;
+    padding: 5px 0;
+    background: wheat;
+}
+
+/* Custom table for cp & qb rule*/
+.bss-custom-table .Polaris-ResourceItem__Content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bss-custom-table .custom-header {
+    background: linear-gradient(
+            135deg
+            , #1400c8 0, #b900b4 100%)!important;
+    color: white!important;
+    font-weight: 600!important;
+    text-transform: uppercase!important;
+}
+
+.cp-rule,
+.qb-rule {
+    margin: 0 !important;
+}
+
+.bss-rule-checkbox.header-title {
+    width: 4rem;
+    visibility: hidden;
+}
+
+.bss-rule-action .Polaris-ButtonGroup {
+    justify-content: center;
+}
+.bss-rule-priority .Polaris-Icon {
+    margin: 0;
+}
+
+/*QB RULE*/
+.bss-rule-name.qb-rule.header-title {
+    width: calc(41% - 4rem) !important;
+}
+.bss-rule-setting.qb-rule.header-title {
+    width: 17% !important;
+    justify-content: center;
+}
+.bss-rule-status.qb-rule.header-title {
+    width: 12% !important;
+    justify-content: center;
+}
+.bss-rule-priority.qb-rule.header-title {
+    width: 12% !important;
+    justify-content: center;
+}
+.bss-rule-action.qb-rule.header-title {
+    width: 18% !important;
+    justify-content: center;
+}
+
+.bss-rule-name.qb-rule.qb-item {
+    width: calc(41% - 0.59*4rem) !important;
+    justify-content: flex-start !important;
+}
+.bss-rule-setting.qb-rule.qb-item {
+    width: calc(17% + 0.17*4rem) !important;
+    text-align: center;
+}
+.bss-rule-status.qb-rule.qb-item {
+    width: calc(12% + 0.12*4rem) !important;
+    text-align: center;
+}
+.bss-rule-priority.qb-rule.qb-item {
+    width: calc(12% + 0.12*4rem) !important;
+    text-align: center;
+}
+.bss-rule-action.qb-rule.qb-item {
+    width: calc(18% + 0.18*4rem) !important;
+}
+/*QB RULE END*/
+
+/*CP RULE*/
+.bss-rule-name.cp-rule.header-title {
+    width: calc(42% - 4rem) !important;
+}
+.bss-rule-status.cp-rule.header-title {
+    width: 20% !important;
+    justify-content: center;
+}
+.bss-rule-priority.cp-rule.header-title {
+    width: 20% !important;
+    justify-content: center;
+}
+.bss-rule-action.cp-rule.header-title {
+    width: 18% !important;
+    justify-content: center;
+}
+
+.bss-rule-name.cp-rule.cp-item.sr-rule {
+    width: calc(37% - 0.1*4rem) !important;
+    justify-content: flex-start !important;
+}
+.bss-rule-action.cp-rule.cp-item.sr-rule {
+    width: calc(12% + 0.18*4rem) !important;
+}
+
+
+.bss-rule-name.cp-rule.cp-item {
+    width: calc(42% - 0.42*4rem) !important;
+    justify-content: flex-start !important;
+}
+.bss-rule-status.cp-rule.cp-item {
+    width: calc(20% + 0.20*4rem) !important;
+    text-align: center;
+}
+.bss-rule-priority.cp-rule.cp-item {
+    width: calc(20% + 0.20*4rem) !important;
+    text-align: center;
+}
+.bss-rule-action.cp-rule.cp-item {
+    width: calc(18% + 0.18*4rem) !important;
+}
+/*CP RULE END*/
+
+.custom-header .header-title {
+    display: flex;
+    align-items: center;
+}
+
+.custom-header .header-title .Polaris-Icon {
+    margin-left: 2rem;
+}
+
+.bss-b2b-action-product-list {
+    display: flex;
+}
+
+.bss-b2b-action-product-list .Polaris-Labelled--hidden {
+    width: 70%;
+}
+
+.bss-b2b-sort-product-list {
+    width: 25%;
+    margin-left: 5%;
+}
+
+.bss-b2b-sort-product-list div:first-child {
+    display: flex;
+}
+
+.bss-b2b-sort-product-list .Polaris-Labelled__LabelWrapper {
+    flex-direction: column-reverse;
+    margin-right: 10px;
+}
+
+.bss-b2b-sort-product-list .Polaris-Select {
+    width: 60%;
+    margin-left: 0;
+}
+
+.bss-rule-priority.header-title .Polaris-Icon {
+    margin-left: 0;
+}
+
+.react-datepicker__time-container {
+    width: 120px !important;
+}
+
+/* Fix price table */
+.data-grid-container .data-grid.b2b-datasheet-grid tbody tr td.cell {
+    cursor: default;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.data-grid-container .data-grid.b2b-datasheet-grid th.cell {
+    cursor: default;
+}
+
+.data-grid-container .data-grid .cell {
+    user-select: auto !important;
+}
+
+.bss-b2b-datasheet > table > tbody tr > td:nth-child(1) > span {
+    cursor: pointer;
+}
+.bss-rightside-group {
+    max-width: 700px;
+}
+
+#abn ~ div .Polaris-DataTable thead tr th:first-child,
+#abn ~ div .Polaris-DataTable tbody tr th:first-child {
+    width: 20%!important;
+}
+@media screen and (max-width: 640px) {
+    #abn ~ div .Polaris-DataTable__Cell {
+        white-space: unset;
+    }
+
+    #abn ~ div .Polaris-DataTable thead tr th:first-child,
+    #abn ~ div .Polaris-DataTable tbody tr th:first-child {
+        width: 30% !important;
+    }
+
+    #abn ~ div .Polaris-DataTable thead tr th:nth-child(3) {
+        width: 10% !important;
+    }
+
+    #abn ~ div .Polaris-DataTable tbody tr th:nth-child(4) {
+        width: 25% !important;
+    }
+}
+.bss-b2b-registration-replace-file {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+.bss-b2b-registration-replace-file span {
+    margin: 5px !important;
+    margin-right : 20px !important;
+}
+.bss-b2b-registration-uploaded-file {
+    border-top: 1px solid #d6d7da;
+    border-bottom: 1px solid #d6d7da;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.bss-b2b-banner-upload-file {
+    margin-top: 12px;
+}
+.block-temp-change-width {
+    margin-right: 20px;
+}
+.Polaris-FormLayout__Item {
+    margin-top: 1rem;
+}
+.Polaris-ResourceList__ItemWrapper:empty {
+    display: none;
+}
+
+.bss-wholesaler-loading-msg {
+    background-color: #f4f6f8;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+/* QI RULE TABLE */
+
+
+@media screen and (min-width: 640px) {
+    .qi-header-title {
+        max-width: 25%;
+        width: 25%;
+    }
+    .qi-header-title.bss-qi-rule-name {
+        margin-left: 45px;
+    }
+    .qi-rule-item {
+        max-width: 25%;
+        width: 25%;
+    }
+    .bss-qi-rule-name.qi-rule-item, .bss-qi-rule-name.qi-header-title {
+        max-width: 35%;
+        width: 35%;
+    }
+
+    .bss-qi-rule-priority.qi-header-title, .bss-qi-rule-priority.qi-rule-item {
+        max-width: 15%;
+        width: 15%;
+    }
+
+    .bss-qi-table .Polaris-ResourceItem__Content div {
+        justify-content: left;
+    }
+
+    .bss-qi-rule-priority.qi-rule-item {
+        padding-left: 3rem;
+    }
+}
