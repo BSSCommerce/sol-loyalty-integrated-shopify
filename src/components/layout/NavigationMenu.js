@@ -42,7 +42,7 @@ import {
     LandingPageMajor,
     ChecklistAlternateMajor
 } from '@shopify/polaris-icons';
-export default function MenuNavigation({Router, toggleIsLoading}) {
+export default function NavigationMenu({Router, toggleIsLoading}) {
     return (
         <Navigation location="/">
             <Navigation.Section
@@ -59,31 +59,19 @@ export default function MenuNavigation({Router, toggleIsLoading}) {
             />
             <Navigation.Section
                 separator
-                title="Quantity/Amount Break (QB/AB)"
+                title="Reward Point"
                 items={[
                     {
                         //url: "/qb",
-                        label: 'QB/AB Rules',
+                        label: 'Reward Point Settings',
                         icon: ListMajor,
-                        onClick: () => toggleIsLoading("/qb")
+                        onClick: () => toggleIsLoading("/reward-point-settings")
                     },
                     {
                         // url: "/qb/install",
-                        label: 'QB/AB Installation',
+                        label: 'Customers',
                         icon: InstallMinor,
-                        onClick: () => toggleIsLoading("/install/qb")
-                    },
-                    {
-                        //url: "/settings/quantity-break",
-                        label: 'Settings',
-                        icon: SettingsMajor,
-                        onClick: () => toggleIsLoading("/settings/quantity-break")
-                    },
-                    {
-                        //url: "/translation/qb-translation",
-                        label: 'Translation',
-                        icon: TextMajor,
-                        onClick: () => toggleIsLoading("/translation/qb-translation")
+                        onClick: () => toggleIsLoading("/customers")
                     }
                 ]}
             />

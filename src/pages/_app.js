@@ -20,14 +20,16 @@ import {
     TopBar,
     Link
 } from '@shopify/polaris';
-import '@shopify/polaris/dist/styles.css';
+import '@shopify/polaris/build/esm/styles.css';
 import translations from '@shopify/polaris/locales/en.json';
 import NavaigationMenu from "src/components/layout/NavigationMenu";
-import '../public/static/admin/css/style.css';
+import 'src/public/static/admin/css/style.css';
+import logo from 'src/public/static/admin/images/logo.svg';
+import logoHover from 'src/public/static/admin/images/logo_hover.svg';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Cookies from "js-cookie";
-import store from "store-js";
+//import store from "store-js";
 export default function App({ Component, pageProps }) {
     const Router = useRouter();
     const defaultState = useRef({
@@ -131,15 +133,15 @@ export default function App({ Component, pageProps }) {
 
     const [storeOwnerName, setStoreOwnerName]= useState('')
     const [storeOwnerEmail, setStoreOwnerEmail]= useState('')
-    useEffect(() => {
-        if (pageProps.storeOwner){
-            store.set("storeOwnerName", pageProps.storeOwner.shop.name);
-            store.set("storeOwnerEmail", pageProps.storeOwner.shop.email);
-        }
-
-        setStoreOwnerName(store.get("storeOwnerName"))
-        setStoreOwnerEmail(store.get("storeOwnerEmail"))
-    }, [storeName, storeOwnerEmail])
+    // useEffect(() => {
+    //     if (pageProps.storeOwner){
+    //         store.set("storeOwnerName", pageProps.storeOwner.shop.name);
+    //         store.set("storeOwnerEmail", pageProps.storeOwner.shop.email);
+    //     }
+    //
+    //     setStoreOwnerName(store.get("storeOwnerName"))
+    //     setStoreOwnerEmail(store.get("storeOwnerEmail"))
+    // }, [storeName, storeOwnerEmail])
     const userMenuMarkup = (
         <TopBar.UserMenu
             actions={userMenuActions}
@@ -243,7 +245,6 @@ export default function App({ Component, pageProps }) {
             </Modal.Section>
         </Modal>
     );
-
     const theme = {
         colors: {
             topBar: {
@@ -252,18 +253,16 @@ export default function App({ Component, pageProps }) {
         },
         logo: {
             width: 124,
-            topBarSource: `https://${APP_DOMAIN}/static/admin/images/logo.svg`,
+            topBarSource: `/static/admin/images/logo.svg`,
             contextualSaveBarSource:
-                `https://${APP_DOMAIN}/static/admin/images/logo_hover.svg`,
+                `/static/admin/images/logo_hover.svg`,
             accessibilityLabel: 'B2B Solution',
-        },
+        }
     };
 
     // const config = {
     //     apiKey: SHOPIFY_API_KEY,
-    //     shopOrigin: Cookies.get('shopOrigin'),
-    //     forceRedirect: false
-    // };
+    //     shopOrigin: Cookies.
     // const baseUrl = `https://${APP_DOMAIN}`;
     // const chatUrl = `${baseUrl}/static/admin/js/chat.js`;
     //
@@ -273,7 +272,7 @@ export default function App({ Component, pageProps }) {
     return (
         <React.Fragment>
             <Head>
-                <title>B2B/Wholesale Solution</title>
+                <title>Loyalty Solana</title>
                 <meta charSet="utf-8" />
                 {/*<script src="https://cdn.shopify.com/s/assets/external/app.js"></script>
                 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -282,7 +281,7 @@ export default function App({ Component, pageProps }) {
                 {/*<script type="text/javascript" src={ chatUrl }></script>*/}
                 {/*<script type="text/javascript" src={ gtm }></script>*/}
                 {/*<link rel="icon" type="image/png" href="/static/admin/images/favicon.ico"/>*/}
-                {/*<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet"></link>*/}
+                <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet"></link>
                 {/*<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"></link>*/}
             </Head>
             <AppProvider
