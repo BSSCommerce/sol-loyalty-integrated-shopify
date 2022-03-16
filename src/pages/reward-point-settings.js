@@ -10,7 +10,9 @@ import {
     ContextualSaveBar,
     Banner
 } from "@shopify/polaris"
+import {useRouter} from "next/router";
 function RewardPointSettings({rule, domain}) {
+    const Router = useRouter();
     const [loading, setLoading] = useState(false)
     const [percentage, setPercentage] = useState(rule.percentage.toString());
     const [pointToUsd, setPointToUsd] = useState(rule.point_to_usd.toString());
@@ -42,12 +44,12 @@ function RewardPointSettings({rule, domain}) {
         }
     }, [percentage, pointToUsd, loading, saveMessage]);
     return (
-        <Page>
+        <Page  breadcrumbs={[{content: 'All Programs', onAction: () => Router.push("/") }]}>
             <ContextualSaveBar
                 message={""}
                 saveAction={{
                     onAction: handleSave,
-                    content: "Save",
+                    content: "Save & Apply",
                     loading: loading
                 }}
             />

@@ -30,6 +30,7 @@ const ruleSaveAndUpdate = require("./api/rule/ruleSaveAndUpdate");
 const getRule = require("./api/rule/getRule");
 const getCustomerPoint = require("./api/customer/getCustomerPoint");
 const getAllCustomer = require("./api/customer/getAllCustomer");
+const { getShopData } = require("./graphql/query")
 app.prepare().then(() => {
     const server = new Koa();
     const router = new Router();
@@ -53,10 +54,19 @@ app.prepare().then(() => {
             scopes: [SHOPIFY_SCOPES],
             accessMode: 'offline',
             async afterAuth(ctx) {
-                const { shop, accessToken } = ctx.session;
-                ctx.cookies.set('shopOrigin', shop, { httpOnly: false, secure: true, sameSite: 'none' });
-                ctx.cookies.set('accessToken', accessToken, { httpOnly: false, secure: true, sameSite: 'none' });
-                await shopSaveAndUpdate(ctx);
+                try {
+                    const { shop, accessToken } = ctx.session;
+                    ctx.cookies.set('shopOrigin', shop, { httpOnly: false, secure: true, sameSite: 'none' });
+                    ctx.cookies.set('accessToken', accessToken, { httpOnly: false, secure: true, sameSite: 'none' });
+                    const shopDataRes = await getShopData(shop, accessToken, API_VERSION);
+                    let shopData = shopDataRes.data;
+                    ctx.cookies.set('storeOwnerName', shopData.shop.name, { httpOnly: false, secure: true, sameSite: 'none' });
+                    ctx.cookies.set('storeOwnerEmail', shopData.shop.email, { httpOnly: false, secure: true, sameSite: 'none' });
+                    await shopSaveAndUpdate(ctx);
+                } catch (e) {
+                    console.log("Error:", e)
+                }
+
                 ctx.redirect("/");
 
             }
@@ -95,6 +105,7 @@ app.prepare().then(() => {
         let result = await getAllCustomer(ctx);
         ctx.body = result;
     });
+
     router.get("/(.*)", verifyRequest({
         fallbackRoute: '/login.html'
     }), async (ctx) => {

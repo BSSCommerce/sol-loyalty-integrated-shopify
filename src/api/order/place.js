@@ -29,7 +29,7 @@ const placeOrder = async (ctx) => {
                     {variantId: `gid://shopify/ProductVariant/${variantId}`, quantity: quantity}
                 ],
                 shippingAddress: shippingAddress,
-                billingAddress: billingAddress,
+                billingAddress: isTheSameBillingShippingAddress ? shippingAddress : billingAddress,
                 note: "Purchase with SolPay",
                 customerId: `gid://shopify/Customer/${customerId}`
             };

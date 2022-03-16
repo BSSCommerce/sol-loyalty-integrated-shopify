@@ -19,7 +19,7 @@ export default function CustomerTable({customers, domain}) {
         return (
             <ResourceItem id={id}>
                 <div className={"bss-rule-name"}><a href={`https://${domain}/admin/customers/${customerId}`} target={"_blank"}>{customerId}</a></div>
-                <div className={"bss-rule-setting"}>{points}</div>
+                <div className={"bss-rule-setting"}>{parseFloat(points).toFixed(2)}</div>
             </ResourceItem>
         );
     }

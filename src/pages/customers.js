@@ -6,8 +6,10 @@ import {
     Card
 } from "@shopify/polaris";
 import CustomerTable from "src/components/customer/CustomerTable";
+import {useRouter} from "next/router";
 function Customers({customers, domain}) {
-    return (<Page>
+    const Router = useRouter();
+    return (<Page breadcrumbs={[{content: 'All Programs', onAction: () => Router.push("/") }]}>
         <Layout>
             <Layout.Section>
                 <Card>

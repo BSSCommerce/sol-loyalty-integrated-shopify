@@ -20,12 +20,10 @@ import {
     TopBar,
     Link
 } from '@shopify/polaris';
-import '@shopify/polaris/build/esm/styles.css';
+import '@shopify/polaris/dist/styles.css';
 import translations from '@shopify/polaris/locales/en.json';
 import NavaigationMenu from "src/components/layout/NavigationMenu";
 import 'src/public/static/admin/css/style.css';
-import logo from 'src/public/static/admin/images/logo.svg';
-import logoHover from 'src/public/static/admin/images/logo_hover.svg';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Cookies from "js-cookie";
@@ -133,15 +131,14 @@ export default function App({ Component, pageProps }) {
 
     const [storeOwnerName, setStoreOwnerName]= useState('')
     const [storeOwnerEmail, setStoreOwnerEmail]= useState('')
-    // useEffect(() => {
-    //     if (pageProps.storeOwner){
-    //         store.set("storeOwnerName", pageProps.storeOwner.shop.name);
-    //         store.set("storeOwnerEmail", pageProps.storeOwner.shop.email);
-    //     }
-    //
-    //     setStoreOwnerName(store.get("storeOwnerName"))
-    //     setStoreOwnerEmail(store.get("storeOwnerEmail"))
-    // }, [storeName, storeOwnerEmail])
+    useEffect(() => {
+        if (Cookies.get('storeOwnerName') !== undefined && Cookies.get('storeOwnerName') != null){
+            setStoreOwnerName(Cookies.get('storeOwnerName'))
+        }
+        if (Cookies.get('storeOwnerEmail') !== undefined && Cookies.get('storeOwnerEmail') != null){
+            setStoreOwnerEmail(Cookies.get('storeOwnerEmail'))
+        }
+    }, [])
     const userMenuMarkup = (
         <TopBar.UserMenu
             actions={userMenuActions}
@@ -252,11 +249,10 @@ export default function App({ Component, pageProps }) {
             },
         },
         logo: {
-            width: 124,
-            topBarSource: `/static/admin/images/logo.svg`,
-            contextualSaveBarSource:
-                `/static/admin/images/logo_hover.svg`,
-            accessibilityLabel: 'B2B Solution',
+            width: 150,
+            topBarSource: "https://app.sol-loyalty.com/images/logo.svg",
+            contextualSaveBarSource: "https://app.sol-loyalty.com/images/logo_hover.svg",
+            accessibilityLabel: 'Loyalty Program',
         }
     };
 
@@ -272,17 +268,9 @@ export default function App({ Component, pageProps }) {
     return (
         <React.Fragment>
             <Head>
-                <title>Loyalty Solana</title>
+                <title>Loyalty Program</title>
                 <meta charSet="utf-8" />
-                {/*<script src="https://cdn.shopify.com/s/assets/external/app.js"></script>
-                <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-                <script type="text/javascript" src={ configUrl }></script>*/}
-
-                {/*<script type="text/javascript" src={ chatUrl }></script>*/}
-                {/*<script type="text/javascript" src={ gtm }></script>*/}
-                {/*<link rel="icon" type="image/png" href="/static/admin/images/favicon.ico"/>*/}
-                <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet"></link>
-                {/*<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"></link>*/}
+                <link rel="icon" type="image/png" href="/images/favicon.ico"/>
             </Head>
             <AppProvider
                 theme={theme}
@@ -290,7 +278,7 @@ export default function App({ Component, pageProps }) {
             >
                 <Frame
                     topBar={topBarMarkup}
-                    navigation={navigationMarkup}
+                    //navigation={navigationMarkup}
                     showMobileNavigation={mobileNavigationActive}
                     onNavigationDismiss={toggleMobileNavigationActive}
                     skipToContentTarget={skipToContentRef.current}
@@ -300,7 +288,6 @@ export default function App({ Component, pageProps }) {
                     {modalMarkup}
                 </Frame>
             </AppProvider>
-            {/*<div dangerouslySetInnerHTML={{__html: gtmBody}} />*/}
         </React.Fragment>
 
     );

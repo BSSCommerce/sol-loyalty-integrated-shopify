@@ -643,3 +643,34 @@ div.rdt_TableCol {
         padding-left: 3rem;
     }
 }
+
+.loyalty-templates {
+    display: flex;
+}
+.loyalty-templates .loyalty-template {
+    background: linear-gradient(135deg, #1400c8 0, #b900b4 100%);
+    color: white;
+    border-radius: 5px;
+    padding: 10px 10px;
+    width: 300px;
+    box-shadow: #333333 2px 2px 2px;
+}
+.loyalty-templates .loyalty-template:hover {
+    cursor: pointer;
+}
+.loyalty-templates .loyalty-template .loyalty-template-icon {
+    font-size: 25px;
+    overflow: auto;
+}
+
+.loyalty-templates .loyalty-template:first-child {
+    margin-right: 20px;
+}
+.loyalty-templates .loyalty-template:last-child {
+    cursor: inherit;
+}
+.loyalty-templates .loyalty-template .loyalty-template-icon  .Polaris-Icon {
+    width: 5rem;
+    height: 5rem;
+    float: left;
+}
