@@ -178,7 +178,20 @@ function handleClose() {
     form.style.display = "none";
     let closeButton = document.getElementById("loyalty-close-button");
     closeButton.remove();
-
+    // Clean UI
+    let loyalQRForm = document.getElementById("loyalty-popup-qr-form");
+    loyalQRForm.style.display = "none";
+    let phantomConnect = document.getElementById("loyalty-popup-connect-phantom");
+    phantomConnect.style.display = "none";
+    let formBody = document.getElementById("loyalty-product-form-body");
+    let footer = document.getElementById("loyalty-product-form-footer");
+    if (formBody) {
+        formBody.style.display = "block";
+        footer.style.display = "flex";
+    }
+    let formSumitButton = document.getElementById("loyalty-product-form-submitbtn");
+    formSumitButton.classList.remove("loading")
+    formSumitButton.innerText = "Place Order";
 }
 function handleRewardPointChange() {
     let rewardPointElm = document.getElementById("loyalty-point-usage");
@@ -618,8 +631,18 @@ async function handlePaymentConfirmation(totalPrice, orderId, reference, points,
         })
     }
 }
-
+function checkIsProductPage() {
+    if (meta && meta.page.pageType === "product") {
+        return true
+    } else if(window.location.pathname.includes("/products/")) {
+        return true
+    }
+    return false;
+}
 async function main() {
+    if (!checkIsProductPage()) {
+        return ;
+    }
     if (loyaltyCustomerId) {
         await Promise.all(
             [
@@ -638,7 +661,7 @@ async function main() {
         handleLoyaltyCloseBtn();
         handleLoyaltySubmitBtn();
     }
-   //getQrCode();
+    //getQrCode();
 }
 
 main();

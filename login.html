@@ -97,7 +97,7 @@
         storeUrl = storeUrl.replace("https://", "");
         var splitStoreUrl = storeUrl.split('.');
         if (splitStoreUrl.indexOf("com") !== -1 && splitStoreUrl.indexOf("myshopify") !== -1) {
-            var authUrl = "https://" + host + "/auth?shop=" + document.getElementById("store-url").value;
+            var authUrl = "https://" + host + "/auth?shop=" + storeUrl;
             window.location = authUrl;
         } else {
             document.getElementById('error-message').innerHTML = "<span class='error-active'>Please enter correct URL!</span>";
